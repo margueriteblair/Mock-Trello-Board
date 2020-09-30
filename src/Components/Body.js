@@ -16,7 +16,19 @@ export default function Body() {
 
             <div className="form">
                 <label>Add task:</label>
-                
+                <input
+                onChange={(e) => {
+                    setInput(e.target.value)
+                }} value={input}
+                ></input>
+                <button onClick={() => {
+                    const newList = [...list]
+                    newList.push({data: input, checked: false})
+                    console.log(newList)
+                    setList(newList)
+                    setInput('')
+                }}
+                >Add task</button>
             </div>
         </div>
     )
