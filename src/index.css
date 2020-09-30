@@ -15,5 +15,9 @@ code {
 .App {
   align-content: center;
   text-align: center;
-  
+
+}
+
+#tasks :hover {
+  background-color: lightgray;
 }
