@@ -16,8 +16,8 @@ export default function ListContextProvider(props) {
     }, [state])
 
     return (
-        <ListContent.Provider value={{list: state, setList: setState}}>
+        <ListContext.Provider value={{list: state, setList: setState}}>
             { props.children }
-        </ListContent.Provider>
+        </ListContext.Provider>
     )
 }
