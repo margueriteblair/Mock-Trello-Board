@@ -15,11 +15,16 @@ export default function ListItem(props) {
         const newList = [...list];
         newList.splice(props.id, 1);
         setList(newList)
+        console.log(newList);
     }
 
     return (
         <div>
-            
+            <div style={props.checked ? {backgroundColor: '#88f'} : {}}>
+                <p onClick={checkItem}>{props.data}</p>
+                <button onClick={removeItem}>Archive</button>
+
+            </div>
         </div>
     )
 }
