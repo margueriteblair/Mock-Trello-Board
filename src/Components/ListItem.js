@@ -11,6 +11,12 @@ export default function ListItem(props) {
         setList(newList)
     }
 
+    const removeItem = () => {
+        const newList = [...list];
+        newList.splice(props.id, 1);
+        setList(newList)
+    }
+
     return (
         <div>
             
