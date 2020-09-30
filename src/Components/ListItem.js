@@ -9,6 +9,7 @@ export default function ListItem(props) {
         const newList = [...list];
         list[props.id].checked = !list[props.id].checked;
         setList(newList)
+        console.log(newList[0].data)
     }
 
     const removeItem = () => {
@@ -21,7 +22,7 @@ export default function ListItem(props) {
     return (
         <div>
             <div style={props.checked ? {backgroundColor: '#88f'} : {}}>
-                <p onClick={checkItem}>{props.data}</p>
+                <p onClick={checkItem}>{list[0].data}</p>
                 <button onClick={removeItem}>Archive</button>
 
             </div>
