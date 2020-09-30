@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { ListContext } from '../Contexts/ListContext'
 import ListItem from './ListItem'
+import Cards from './Cards'
 
 export default function Body() {
     const {list, setList} = useContext(ListContext);
@@ -18,6 +19,7 @@ export default function Body() {
                     )
                 })
             }
+        {/* <Cards> */}
         <div className="form">
             <label>Add list item: </label>
             <textarea onChange={(e) => {
@@ -33,6 +35,7 @@ export default function Body() {
                 setInput('');
             }}> Add!</button>
         </div>
+        {/* </Cards> */}
         </div>
     )
 }

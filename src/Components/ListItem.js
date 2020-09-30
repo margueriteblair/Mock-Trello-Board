@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { ListContext } from '../Contexts/ListContext'
+import Cards from './Cards'
 
 export default function ListItem(props) {
 
@@ -20,6 +21,7 @@ export default function ListItem(props) {
     }
 
     return (
+        <Cards>
         <div>
             <div style={props.checked ? {backgroundColor: '#88f'} : {}}>
                 <p onClick={checkItem}>{list[0].data}</p>
@@ -27,5 +29,6 @@ export default function ListItem(props) {
 
             </div>
         </div>
+        </Cards>
     )
 }
