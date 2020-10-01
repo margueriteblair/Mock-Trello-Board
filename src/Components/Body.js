@@ -10,10 +10,7 @@ export default function Body() {
     const addCard = () => {
         let newCard = document.createElement('div');
         newCard.innerHTML = `<div className="form">
-        {/* <label>Add list item: </label> */}
-        <input onChange={(e) => {
-            setInput(e.target.value)
-        }} value={input} placeholder="Add Task"/>
+                            <input placeholder="Add Task" value=input/>
         
         <button onClick={() => {
             const newList = [...list];
@@ -25,10 +22,11 @@ export default function Body() {
         }}> Add!</button>
     </div>
     <button style={{marginTop: 20}}`
-    console.log(newCard);
+    console.log(document.getElementById('cards'));
+    document.getElementById('cards').appendChild(newCard);
     }
     return (
-        <div className="cards">
+        <div id="cards">
             <h1 style={{backgroundColor: "lightgreen"}}>List of Todos:</h1>
             {
                 list.map((value, index) => {
@@ -56,7 +54,7 @@ export default function Body() {
                 setInput('');
             }}> Add!</button>
         </div>
-        <button style={{marginTop: 20}}
+        <button style={{marginTop: 20, marginBottom: 20}}
         onClick={addCard}
         >Create New Work Flow?</button>
         </div>
