@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react'
 
 export const ListContext = React.createContext();
+//export const ListContext = createContext()
 
 export default function ListContextProvider(props) {
+
+    
     const [state, setState] = useState(() => {
         return JSON.parse(localStorage.getItem('Todo-List')) ?? [{data: "Sample Text", checked: false}]
     //use of the null coalescing operator

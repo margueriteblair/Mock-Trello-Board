@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { ListContext } from '../Contexts/ListContext'
-import Cards from './Cards'
+// import Cards from './Cards'
 
 export default function ListItem(props) {
 
@@ -8,7 +8,7 @@ export default function ListItem(props) {
 
     const checkItem = () => {
         const newList = [...list];
-        list[props.id].checked = !list[props.id].checked;
+        newList[props.id].checked = !list[props.id].checked;
         setList(newList)
         console.log(list[props.id].data)
     }

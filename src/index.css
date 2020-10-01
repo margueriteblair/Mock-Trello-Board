@@ -15,9 +15,25 @@ code {
 .App {
   align-content: center;
   text-align: center;
-
 }
 
 #tasks :hover {
   background-color: lightgray;
+  /* text-align: center; */
+  /* justify-content: center; */
+}
+
+#tasks {
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  width: 300px;
+  margin: 0 auto;
+  /* display: flex; */
+}
+
+#tasks p {
+  text-align: center;
+  display: inline-flex;
+  margin-right: 13px;
 }
