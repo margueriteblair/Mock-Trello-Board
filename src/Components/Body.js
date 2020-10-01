@@ -6,8 +6,29 @@ import ListItem from './ListItem'
 export default function Body() {
     const {list, setList} = useContext(ListContext);
     const [input, setInput] = useState()
+
+    const addCard = () => {
+        let newCard = document.createElement('div');
+        newCard.innerHTML = `<div className="form">
+        {/* <label>Add list item: </label> */}
+        <input onChange={(e) => {
+            setInput(e.target.value)
+        }} value={input} placeholder="Add Task"/>
+        
+        <button onClick={() => {
+            const newList = [...list];
+            newList.push({data: input, checked: false})
+            console.log('List', typeof(newList[0].data), newList)
+           
+            setList(newList)
+            setInput('');
+        }}> Add!</button>
+    </div>
+    <button style={{marginTop: 20}}`
+    console.log(newCard);
+    }
     return (
-        <div>
+        <div className="cards">
             <h1 style={{backgroundColor: "lightgreen"}}>List of Todos:</h1>
             {
                 list.map((value, index) => {
@@ -35,7 +56,9 @@ export default function Body() {
                 setInput('');
             }}> Add!</button>
         </div>
-        {/* </Cards> */}
+        <button style={{marginTop: 20}}
+        onClick={addCard}
+        >Create New Work Flow?</button>
         </div>
     )
 }
