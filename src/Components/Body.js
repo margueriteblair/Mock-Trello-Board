@@ -8,7 +8,7 @@ export default function Body() {
     const [input, setInput] = useState()
     return (
         <div>
-            <h1>List of Todos:</h1>
+            <h1 style={{backgroundColor: "lightgreen"}}>List of Todos:</h1>
             {
                 list.map((value, index) => {
                     return (
