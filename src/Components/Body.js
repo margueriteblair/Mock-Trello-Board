@@ -9,20 +9,9 @@ export default function Body() {
 
     const addCard = () => {
         let newCard = document.createElement('div');
-        newCard.innerHTML = `<div className="form">
-                            <input placeholder="Add Task" value=input/>
-        
-        <button onClick={() => {
-            const newList = [...list];
-            newList.push({data: input, checked: false})
-            console.log('List', typeof(newList[0].data), newList)
-           
-            setList(newList)
-            setInput('');
-        }}> Add!</button>
-    </div>
-    <button style={{marginTop: 20}}`
-    console.log(document.getElementById('cards'));
+        newCard.innerHTML += `<div className="form">`
+        newCard.innerHTML += `<input placeholder="Add Task"/>`
+        newCard.innerHTML += `<button>Add!</button>`
     document.getElementById('cards').appendChild(newCard);
     }
     return (
